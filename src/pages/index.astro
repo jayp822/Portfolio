@@ -1,39 +1,43 @@
 ---
 import Image from "astro/components/Image.astro";
 import Navbar from "../components/Navbar.astro";
+
+import Footer from "../components/Footer.astro";
 import self from "../images/self.webp";
 const title = "Jay's Portfolio";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body class="dark:bg-black dark:text-white min-h-screen w-full">
-    <Navbar />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="flex flex-col dark:bg-black dark:text-white min-h-screen w-full">
+		<Navbar />
+		<main class="flex-grow">
+			<header
+				class="mx-auto m-10 gap-10 flex-col sm:flex items-center justify-center mt-[100px] w-[85%]">
+				<h1 class="text-xl md:text-xl font-bold text-center text-balance">
+					Hey There 👋 My Name is Jay Patel and I am Software Developer Based in
+					Georgia
+				</h1>
+				<div>
+					<Image
+						class="rounded-3xl transition duration-200 ease-in-out"
+						src={self}
+						alt="portfolio picture"
+						width="375"
+						height="375"
+					/>
+				</div>
+			</header>
+		</main>
 
-    <header
-      class="mx-auto m-10 gap-10 flex-col sm:flex items-center justify-center mt-[100px] w-[85%]"
-    >
-      <h1 class="text-xl md:text-xl font-bold text-center text-balance">
-        Hey There 👋 My Name is Jay Patel and I am Software Developer Based in
-        Georgia
-      </h1>
-      <div>
-        <Image
-          class="rounded-3xl"
-          src={self}
-          alt="portfolio picture"
-          width="250"
-          height="250"
-        />
-      </div>
-    </header>
-  </body>
+		<Footer />
+	</body>
 </html>
