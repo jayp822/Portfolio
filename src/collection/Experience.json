@@ -1,0 +1,16 @@
+[
+  {
+    "title": "IT Helpdesk Specialist",
+    "company": "UGA",
+    "description": "Helped teachers and students in the college of education with tech related issues and periodically reset Operating System and Disk Storage on Laptops.",
+    "start": "Aug 2023",
+    "end": "May 2024"
+  },
+  {
+    "title": "Software Developer Intern",
+    "company": "United States Air Force",
+    "description": "Developed a WPF client-server application to emulate F-35 fighter jet control inputs via joystick, enabling real-time modifications to aircraft components through a TCP connection. Contributed to integrating video feeds from six optical sensors on the F-35 to enhance situational awareness and obtained security clearance for military base operations.",
+    "start": "May 2024",
+    "end": "Aug 2024"
+  }
+]

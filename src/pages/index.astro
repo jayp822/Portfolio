@@ -3,13 +3,16 @@ import Image from "astro/components/Image.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
 import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Home Page">
   <header
-    class="mx-auto m-10 gap-10 flex-col flex sm:flex-row items-center justify-center mt-[100px] w-[85%]"
+    class="mx-auto m-10 gap-10 flex-col flex sm:flex-row items-center justify-center mt-[150px] w-[85%]"
   >
-    <h1 class="text-xl md:text-4xl font-bold text-center text-balance w-[50%]">
+    <h1
+      class="text-xl md:text-4xl font-bold text-center text-balance sm:w-[50%]"
+    >
       Hey There 👋 My Name is <span
         class="text-nowrap relative before:absolute before:w-full before:h-[0.3rem] before:bg-sky-500 before:rounded-full before:-bottom-1 before:inset-x-0"
         >Jay Patel</span
@@ -18,7 +21,7 @@ import Layout from "../layouts/Layout.astro";
     </h1>
     <div>
       <Image
-        class="rounded-3xl transition duration-200 ease-in-out"
+        class="rounded-3xl transition duration-200 ease-in-out size-[200px] sm:size-[300px]"
         src="/images/self.webp"
         alt="portfolio picture"
         width="300"
@@ -31,15 +34,31 @@ import Layout from "../layouts/Layout.astro";
   <div class="flex justify-center items-end">
     <a
       href="/docs/Resume_2024.pdf"
-      class="w-[7rem] h-[2.5rem]"
+      class="w-[7rem] h-[2.5rem] group"
       download="Jay_Patel_Software_Developer_Resume.pdf"
     >
       <button
-        class="bg-red-500 text-white text-xl hover:bg-sky-500 hover:scale-110 transition duration-200 rounded-3xl font-medium text-center w-[7rem] h-[2.5rem] block mx-auto"
-        >Resume</button
-      >
+        class="bg-red-500 flex items-center justify-center text-white text-lg group-hover:bg-sky-500 hover:scale-110 transition duration-200 rounded-3xl font-medium text-center w-[9rem] h-[2.5rem] mx-auto"
+        ><span>Resume</span><span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-down-to-line inline mx-1 mb-1 group"
+            ><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path
+              d="M19 21H5"></path></svg
+          ></span
+        >
+      </button>
     </a>
   </div>
+  <About/>
   <Timeline />
   <ProjectsSection />
 </Layout>

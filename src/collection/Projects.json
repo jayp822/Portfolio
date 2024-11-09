@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Application Ally",
+    "description-short": "Applications Management System",
+    "description-long": "A simple and effective job application management system with job search features",
+    "image": "/images/ApplicationAlly.png",
+    "TechStack": "NextJS, MongoDB, Javascript, React, TailwindCSS, Mongoose, NodeJS",
+    "url": "https://applicationally.vercel.app"
+  }
+]

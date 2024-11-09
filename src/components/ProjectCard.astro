@@ -1,9 +1,11 @@
 ---
-const { projectNumber } = Astro.props;
+const { projectNumber, link, name, description, image } = Astro.props;
 ---
 
 <div
-  class="border rounded-2xl border-white w-[15rem] h-[15rem] flex items-center hover:shadow-xl hover:shadow-white justify-center text-center opacity-20 hover:scale-105 trasition duration-200 ease-out"
->
-  Project {projectNumber}
+	class="border rounded-2xl border-white size-[10rem] sm:size-[12rem] md:size-[15rem] flex items-center hover:shadow-xl hover:shadow-white justify-center text-center opacity-20 hover:scale-105 trasition duration-200 ease-out bg-[url({image})]">
+	<a href={link} target="_blank">
+		<h1>{projectNumber}{name}</h1>
+		<p>{description}</p>
+	</a>
 </div>
