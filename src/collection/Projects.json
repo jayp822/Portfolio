@@ -6,5 +6,37 @@
     "image": "/images/ApplicationAlly.webp",
     "TechStack": "NextJS, MongoDB, Javascript, React, TailwindCSS, Mongoose, NodeJS",
     "url": "https://applicationally.vercel.app"
+  },
+  {
+    "name": "Local Reports",
+    "description-short": "Community Driven Lost People Finder",
+    "description-long": "",
+    "image": "/images/local-reports-logo.webp",
+    "TechStack": "TypeScript, NextJS, React, Cloudflare, Tailwind CSS",
+    "url": "https://github.com/orgs/Local-Reports/repositories"
+  },
+  {
+    "name": "Weather Wear",
+    "description-short": "Weather Oriented Clothing Recommendations",
+    "description-long": "Simple Web application that sends you an email about proper cloting attire based of today's weather",
+    "image": "/images/Placeholder.webp",
+    "TechStack": "NextJS, Python, TailwindCSS, Azure",
+    "url": "https://weather-wear-app.vercel.app"
+  },
+  {
+    "name": "MyPass",
+    "description-short": "Tkinter Password Manager",
+    "description-long": "",
+    "image": "/images/MyPass.webp",
+    "TechStack": "Python",
+    "url": "https://youtu.be/UNTamQXoa8U"
+  },
+  {
+    "name": "Shell Replica",
+    "description-short": "Implemented Bash Shell using C",
+    "description-long": "",
+    "image": "/images/Placeholder.webp",
+    "TechStack": "C",
+    "url": "https://github.com/jayp822/my-bash-shell"
   }
 ]

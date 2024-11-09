@@ -4,8 +4,8 @@ const { projectNumber, link, name, description, image } = Astro.props;
 
 <a href={link} target="_blank" class="block">
   <div
-    class="relative rounded-2xl h-[10rem] sm:h-[12rem] md:h-[15rem] w-full flex flex-col justify-end hover:shadow-lg hover:shadow-gray-800 text-white hover:scale-105 transition duration-200 ease-out"
-    style={`background-image: url('${image}'); background-size: contain; background-position: center;`}
+    class="relative border rounded-2xl flex size-[150px] sm:size-[200px] lg:size-[250px] flex-col justify-end hover:shadow-lg hover:shadow-gray-800 text-white hover:scale-105 transition duration-200 ease-out"
+    style={`background-image: url('${image}'); background-size: cover; background-position: center;`}
   >
     <div
       class="bg-black bg-opacity-70 px-3 py-2 rounded-b-2xl w-full flex flex-col justify-center items-center space-y-1"
