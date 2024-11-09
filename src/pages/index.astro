@@ -1,43 +1,41 @@
 ---
 import Image from "astro/components/Image.astro";
-import Navbar from "../components/Navbar.astro";
-
-import Footer from "../components/Footer.astro";
-import self from "../images/self.webp";
-const title = "Jay's Portfolio";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="flex flex-col dark:bg-black dark:text-white min-h-screen w-full">
-		<Navbar />
-		<main class="flex-grow">
-			<header
-				class="mx-auto m-10 gap-10 flex-col sm:flex items-center justify-center mt-[100px] w-[85%]">
-				<h1 class="text-xl md:text-xl font-bold text-center text-balance">
-					Hey There 👋 My Name is Jay Patel and I am Software Developer Based in
-					Georgia
-				</h1>
-				<div>
-					<Image
-						class="rounded-3xl transition duration-200 ease-in-out"
-						src={self}
-						alt="portfolio picture"
-						width="375"
-						height="375"
-					/>
-				</div>
-			</header>
-		</main>
+<Layout title="Home Page">
+  <header
+    class="mx-auto m-10 gap-10 flex-col flex sm:flex-row items-center justify-center mt-[100px] w-[85%]"
+  >
+    <h1 class="text-xl md:text-4xl font-bold text-center text-balance w-[50%]">
+      Hey There 👋 My Name is <span
+        class="text-nowrap relative before:absolute before:w-full before:h-[0.3rem] before:bg-sky-500 before:rounded-full before:-bottom-1 before:inset-x-0"
+        >Jay Patel</span
+      >
+      and I am Software Developer Based in Georgia
+    </h1>
+    <div>
+      <Image
+        class="rounded-3xl transition duration-200 ease-in-out"
+        src="/images/self.webp"
+        alt="portfolio picture"
+        width="300"
+        height="300"
+        draggable="false"
+      />
+    </div>
+  </header>
 
-		<Footer />
-	</body>
-</html>
+  <div class="flex justify-center items-end">
+    <a
+      href="/src/documents/Resume_2024.pdf"
+      class="w-[7rem] h-[2.5rem]"
+      download
+    >
+      <button
+        class="bg-red-500 text-white text-xl hover:bg-sky-500 hover:scale-110 transition duration-200 rounded-3xl font-medium text-center w-[7rem] h-[2.5rem] block mx-auto"
+        >Resume</button
+      >
+    </a>
+  </div>
+</Layout>
