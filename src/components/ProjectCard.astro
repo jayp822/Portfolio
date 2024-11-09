@@ -2,10 +2,18 @@
 const { projectNumber, link, name, description, image } = Astro.props;
 ---
 
-<div
-	class="border rounded-2xl border-white size-[10rem] sm:size-[12rem] md:size-[15rem] flex items-center hover:shadow-xl hover:shadow-white justify-center text-center opacity-20 hover:scale-105 trasition duration-200 ease-out bg-[url({image})]">
-	<a href={link} target="_blank">
-		<h1>{projectNumber}{name}</h1>
-		<p>{description}</p>
-	</a>
-</div>
+<a href={link} target="_blank" class="block">
+  <div
+    class="relative rounded-2xl h-[10rem] sm:h-[12rem] md:h-[15rem] w-full flex flex-col justify-end hover:shadow-lg hover:shadow-gray-800 text-white hover:scale-105 transition duration-200 ease-out"
+    style={`background-image: url('${image}'); background-size: contain; background-position: center;`}
+  >
+    <div
+      class="bg-black bg-opacity-70 px-3 py-2 rounded-b-2xl w-full flex flex-col justify-center items-center space-y-1"
+    >
+      <h1 class="font-bold text-xs sm:text-sm md:text-base">{name}</h1>
+      <p class="text-[8px] sm:text-[10px] md:text-[12px] text-center">
+        {description}
+      </p>
+    </div>
+  </div>
+</a>
