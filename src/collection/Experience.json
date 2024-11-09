@@ -1,16 +1,26 @@
 [
   {
     "title": "IT Helpdesk Specialist",
-    "company": "UGA",
+    "company": "UGA College of Education",
     "description": "Helped teachers and students in the college of education with tech related issues and periodically reset Operating System and Disk Storage on Laptops.",
     "start": "Aug 2023",
-    "end": "May 2024"
+    "end": "May 2024",
+    "image": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-briefcase-business\"><path d=\"M12 12h.01\"/><path d=\"M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2\"/><path d=\"M22 13a18.15 18.15 0 0 1-20 0\"/><rect width=\"20\" height=\"14\" x=\"2\" y=\"6\" rx=\"2\"/></svg>"
   },
   {
     "title": "Software Developer Intern",
     "company": "United States Air Force",
-    "description": "Developed a WPF client-server application to emulate F-35 fighter jet control inputs via joystick, enabling real-time modifications to aircraft components through a TCP connection. Contributed to integrating video feeds from six optical sensors on the F-35 to enhance situational awareness and obtained security clearance for military base operations.",
+    "description": "Developed a WPF client-server application to emulate F-35 fighter jet control inputs via joystick, enabling real-time modifications to aircraft components through a TCP connection.",
     "start": "May 2024",
-    "end": "Aug 2024"
+    "end": "Aug 2024",
+    "image": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-briefcase-business\"><path d=\"M12 12h.01\"/><path d=\"M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2\"/><path d=\"M22 13a18.15 18.15 0 0 1-20 0\"/><rect width=\"20\" height=\"14\" x=\"2\" y=\"6\" rx=\"2\"/></svg>"
+  },
+  {
+    "title": "Bachelors of Computer Science",
+    "company": "University of Georgia",
+    "description": "Earned a Bachelor’s degree in Computer Science from the University of Georgia, graduating with a GPA of 3.84/4.00.",
+    "start": "Aug 2020",
+    "end": "Dec 2024",
+    "image": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-graduation-cap\"><path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z\"></path><path d=\"M22 10v6\"></path><path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\"></path></svg>"
   }
 ]

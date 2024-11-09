@@ -1,0 +1,21 @@
+---
+const { start, end, company, title, description, icon } = Astro.props;
+---
+
+<li class="mb-10 ms-6">
+  <span
+    class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 ring-8 ring-white dark:bg-blue-900 dark:ring-gray-900"
+    set:html={icon}
+  />
+  <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+    {title} | {company}
+  </h3>
+  <time
+    class="mb-2 block text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+  >
+    {start} - {end}
+  </time>
+  <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+    {description}
+  </p>
+</li>
