@@ -1,27 +1,42 @@
 ---
 import Image from "astro/components/Image.astro";
+import About from "../components/About.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
 import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
-import About from "../components/About.astro";
+import "../styles/global.css";
 ---
 
 <Layout title="Home Page">
+  <div class="relative mx-[20%] w-full">
+    <div
+      class="absolute top-60 h-[50vw] max-h-[30rem] w-[50vw] max-w-[30rem] animate-blob rounded-full bg-green-500 opacity-70 mix-blend-color blur-2xl filter"
+    >
+    </div>
+    <div
+      class="animation-delay-2000 absolute left-[15rem] top-[10rem] h-[50vw] max-h-[30rem] w-[50vw] max-w-[30rem] animate-blob rounded-full bg-blue-500 opacity-70 mix-blend-color blur-2xl filter"
+    >
+    </div>
+    <div
+      class="animation-delay-4000 absolute h-[50vw] max-h-[30rem] w-[50vw] max-w-[30rem] animate-blob rounded-full bg-red-500 opacity-60 mix-blend-color blur-2xl filter"
+    >
+    </div>
+  </div>
   <header
-    class="mx-auto m-10 gap-10 flex-col flex sm:flex-row items-center justify-center mt-[150px] w-[85%]"
+    class="m-10 mx-auto mt-[150px] flex w-[85%] flex-col items-center justify-center gap-10 sm:flex-row"
   >
     <h1
-      class="text-xl md:text-4xl font-bold text-center text-balance sm:w-[50%]"
+      class="z-40 text-balance text-center text-xl font-bold sm:w-[50%] md:text-4xl"
     >
       Hey There 👋 My Name is <span
-        class="text-nowrap relative before:absolute before:w-full before:h-[0.3rem] before:bg-sky-500 before:rounded-full before:-bottom-1 before:inset-x-0"
+        class="relative text-nowrap before:absolute before:inset-x-0 before:-bottom-1 before:h-[0.3rem] before:w-full before:rounded-full before:bg-sky-500"
         >Jay Patel</span
       >
       and I am Software Developer Based in Georgia
     </h1>
-    <div>
+    <div class="z-40">
       <Image
-        class="rounded-3xl transition duration-200 ease-in-out size-[200px] sm:size-[300px]"
+        class="size-[200px] rounded-3xl transition duration-200 ease-in-out sm:size-[300px]"
         src="/images/self.webp"
         alt="portfolio picture"
         width="300"
@@ -31,26 +46,26 @@ import About from "../components/About.astro";
     </div>
   </header>
 
-  <div class="flex justify-center items-end">
+  <div class="z-40 flex items-end justify-center">
     <a
       href="/docs/Resume_2024.pdf"
-      class="w-[7rem] h-[2.5rem] group"
+      class="group z-40 h-[2.5rem] w-[7rem]"
       download="Jay_Patel_Software_Developer_Resume.pdf"
     >
       <button
-        class="bg-red-500 flex items-center justify-center text-white text-lg sm:group-hover:bg-sky-500 sm:hover:scale-110 transition duration-200 rounded-3xl font-medium text-center w-[9rem] h-[2.5rem] mx-auto"
+        class="mx-auto flex h-[2.5rem] w-[9rem] items-center justify-center rounded-3xl border bg-black text-center text-lg font-medium text-white transition duration-200 sm:group-hover:bg-orange-600"
         ><span>Resume</span><span
           ><svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-arrow-down-to-line inline mx-1 mb-1 group"
+            class="lucide lucide-arrow-down-to-line mx-1 mb-1 inline sm:group-hover:animate-bounce"
             ><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path
               d="M19 21H5"></path></svg
           ></span

@@ -5,6 +5,17 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      animation: {
+        blob: "blob 6s ease-in-out infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%": { transform: " scale(1)" },
+          "33%": { transform: " scale(1.05)" },
+          "66%": { transform: "scale(0.95)" },
+          "100%": { transform: " scale(1)" },
+        },
+      },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
