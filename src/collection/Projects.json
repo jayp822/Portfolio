@@ -19,7 +19,7 @@
     "name": "Weather Wear",
     "description-short": "Weather Oriented Clothing Recommendations",
     "description-long": "Simple Web application that sends you an email about proper cloting attire based of today's weather",
-    "image": "/images/Placeholder.webp",
+    "image": "/images/WeatherWear.webp",
     "TechStack": "NextJS, Python, TailwindCSS, Azure",
     "url": "https://weather-wear-app.vercel.app"
   },
@@ -35,7 +35,7 @@
     "name": "Shell Replica",
     "description-short": "Implemented Bash Shell using C",
     "description-long": "",
-    "image": "/images/Placeholder.webp",
+    "image": "/images/Shell.webp",
     "TechStack": "C",
     "url": "https://github.com/jayp822/my-bash-shell"
   }
