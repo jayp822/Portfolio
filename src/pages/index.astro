@@ -1,83 +1,17 @@
 ---
-import Image from "astro/components/Image.astro";
 import About from "../components/About.astro";
+import Blobs from "../components/Blobs.astro";
+import Button from "../components/Button.astro";
+import Header from "../components/Header.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
 import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
 ---
 
 <Layout title="Home">
-  <div
-    class="relative mx-[20%] w-[80%]"
-    transition:name="blobs"
-    transition:animate="none"
-  >
-    <div
-      class="absolute top-60 h-[50vw] max-h-[30rem] w-[50vw] max-w-[30rem] animate-blob overflow-hidden rounded-full bg-green-500 opacity-70 mix-blend-difference blur-2xl filter"
-    >
-    </div>
-    <div
-      class="animation-delay-4000 absolute left-[5rem] top-[10rem] h-[50vw] max-h-[30rem] w-[50vw] max-w-[30rem] animate-blob overflow-hidden rounded-full bg-blue-500 opacity-60 mix-blend-difference blur-2xl filter md:left-[10rem] lg:left-[15rem]"
-    >
-    </div>
-    <div
-      class="animation-delay-4000 absolute h-[50vw] max-h-[30rem] w-[50vw] max-w-[30rem] animate-blob overflow-hidden rounded-full bg-red-500 opacity-60 mix-blend-difference blur-2xl filter"
-    >
-    </div>
-  </div>
-  <header
-    class="m-10 mx-auto mt-[150px] flex w-[85%] flex-col items-center justify-center gap-10 sm:flex-row"
-  >
-    <h1
-      class="z-40 text-balance text-center text-xl font-bold sm:w-[50%] md:text-4xl"
-    >
-      Hey There 👋 My Name is <span
-        class="relative text-nowrap before:absolute before:inset-x-0 before:-bottom-1 before:h-[0.3rem] before:w-full before:rounded-full before:bg-sky-500"
-        >Jay Patel</span
-      >
-      and I am Software Developer Based in Georgia
-    </h1>
-    <div class="z-40">
-      <Image
-        class="h-[200px] w-[200px] rounded-3xl transition duration-200 ease-in-out sm:h-[300px] sm:w-[300px]"
-        src="/images/self.webp"
-        alt="portfolio picture"
-        width="300"
-        height="300"
-        draggable="false"
-        loading="eager"
-      />
-    </div>
-  </header>
-
-  <div class="z-40 flex items-end justify-center">
-    <a
-      href="/docs/Resume_2024.pdf"
-      class="group z-40 h-[2.5rem] w-[7rem]"
-      download="Jay_Patel_Software_Developer_Resume.pdf"
-    >
-      <button
-        class="mx-auto flex h-[2.5rem] w-[9rem] items-center justify-center rounded-3xl border bg-black text-center text-lg font-medium text-white transition duration-200 sm:group-hover:bg-orange-600"
-        ><span>Resume</span><span
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-arrow-down-to-line mx-1 mb-1 inline sm:group-hover:animate-bounce"
-            ><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path
-              d="M19 21H5"></path></svg
-          ></span
-        >
-      </button>
-    </a>
-  </div>
+  <Blobs />
+  <Header />
+  <Button />
   <About />
   <Timeline />
   <ProjectsSection />
