@@ -1,5 +1,14 @@
 ---
+import { fade } from "astro:transitions";
+import AboutPost from "../content/about.mdx";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="About" />
+<Layout title="About">
+  <article
+    transition:animate={fade({ duration: "0.5s" })}
+    class="prose prose-base prose-invert mx-auto mt-[100px] w-[90%] overflow-hidden text-balance md:prose-lg lg:prose-xl prose-headings:text-gray-300 prose-h1:text-blue-400 prose-p:font-normal"
+  >
+    <AboutPost />
+  </article>
+</Layout>

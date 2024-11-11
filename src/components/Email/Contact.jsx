@@ -1,12 +1,10 @@
 import { useRef, useState } from "react";
 
-export default function Contact()
-{
+export default function Contact() {
   const [isSubmited, setIsSubmitted] = useState(false);
   const formRef = useRef(null);
 
-  const handleSubmit = async (event) =>
-  {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const formData = {
@@ -17,8 +15,7 @@ export default function Contact()
       text: `Sender's Email: ${event.target.email.value} \nMessage: ${event.target.text.value}`,
     };
 
-    try
-    {
+    try {
       const response = await fetch("/api/sendEmail.json", {
         method: "POST",
         headers: {
@@ -34,12 +31,10 @@ export default function Contact()
       // Set the state to true when the email is successfully sent
       setIsSubmitted(true);
 
-      if (formRef.current)
-      {
+      if (formRef.current) {
         formRef.current.reset();
       }
-    } catch (error)
-    {
+    } catch (error) {
       console.error("Error:", error);
     }
   };
@@ -94,12 +89,50 @@ export default function Contact()
         <button
           type="submit"
           disabled={isSubmited} // Disable button if isSubmited is true
-          className={`flex gap-2 items-center text-center justify-center w-[65%] max-w-[13rem] overflow-hidden rounded-full md:w-[55%] lg:w-[45%] ${isSubmited
-            ? "bg-blue-600 opacity-60"
-            : "bg-blue-600 duration-200 ease-out relative focus:ring-2 focus:ring-blue-500  shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-pink-500 before:duration-300 before:ease-out sm:hover:shadow-pink-500 sm:hover:before:h-[11rem] sm:hover:before:w-[13rem] "
-            } px-4 py-2 font-semibold text-white focus:outline-none`}
+          className={`flex w-[65%] max-w-[13rem] items-center justify-center gap-2 overflow-hidden rounded-full text-center md:w-[55%] lg:w-[45%] ${
+            isSubmited
+              ? "bg-blue-600 opacity-60"
+              : "relative bg-blue-600 shadow-2xl transition-all duration-200 ease-out before:absolute before:h-0 before:w-0 before:rounded-full before:bg-pink-500 before:duration-300 before:ease-out focus:ring-2 focus:ring-blue-500 sm:hover:shadow-pink-500 sm:hover:before:h-[11rem] sm:hover:before:w-[13rem]"
+          } px-4 py-2 font-semibold text-white focus:outline-none`}
         >
-          {isSubmited ? <><p className="z-40">Message Sent!</p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5" /></svg></> : <><p className="z-40">Send</p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="z-40 lucide lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></svg> </>}
+          {isSubmited ? (
+            <>
+              <p className="z-40">Message Sent!</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-check"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+            </>
+          ) : (
+            <>
+              <p className="z-40">Send</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-send z-40"
+              >
+                <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                <path d="m21.854 2.147-10.94 10.939" />
+              </svg>{" "}
+            </>
+          )}
         </button>
       </form>
     </div>

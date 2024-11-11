@@ -1,9 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import { fade } from "astro:transitions";
 import Self from "../assets/self.webp";
 ---
 
 <header
+  transition:animate={fade({ duration: "0.5s" })}
   class="m-10 mx-auto mt-[150px] flex w-[85%] flex-col items-center justify-center gap-10 sm:flex-row"
 >
   <h1

@@ -1,5 +1,5 @@
 ---
-import About from "../components/About.astro";
+import AboutText from "../components/AboutText.astro";
 import Blobs from "../components/Blobs.astro";
 import Contact from "../components/Email/Contact";
 import Header from "../components/Header.astro";
@@ -10,11 +10,11 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-	<Blobs />
-	<Header />
-	<Button />
-	<About />
-	<Timeline />
-	<ProjectsSection />
-	<Contact client:visible />
+  <Blobs />
+  <Header />
+  <Button />
+  <AboutText />
+  <Timeline />
+  <ProjectsSection />
+  <Contact client:visible />
 </Layout>
