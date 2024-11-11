@@ -5,25 +5,27 @@ import TimelinePoint from "./TimelinePoint.astro";
 ---
 
 <div
-	class="relative mx-auto flex w-[85%] flex-col items-center justify-center sm:w-[80%] md:w-[70%] lg:w-[60%]"
-	transition:animate={fade({ duration: "0.25s" })}>
-	<h1
-		class="relative mx-auto mb-[40px] mt-[8rem] inline-block text-nowrap text-center text-2xl font-bold before:absolute before:-bottom-1 before:left-0 before:h-[0.3rem] before:w-full before:rounded-full before:bg-purple-500 sm:text-3xl lg:text-4xl">
-		Education and Experience
-	</h1>
+  class="relative mx-auto flex w-[85%] flex-col items-center justify-center sm:w-[80%] md:w-[70%] lg:w-[60%]"
+  transition:animate={fade({ duration: "0.25s" })}
+>
+  <h1
+    class="relative mx-auto mb-[40px] mt-[8rem] inline-block text-nowrap text-center text-2xl font-bold before:absolute before:-bottom-1 before:left-0 before:h-[0.3rem] before:w-full before:rounded-full before:bg-purple-500 sm:text-3xl lg:text-4xl"
+  >
+    Education and Experience
+  </h1>
 
-	<ol class="relative border-s-[3px] border-gray-100 dark:border-gray-700">
-		{
-			experiences.map(experience => (
-				<TimelinePoint
-					start={experience.start}
-					end={experience.end}
-					company={experience.company}
-					title={experience.title}
-					description={experience.description}
-					icon={experience.image}
-				/>
-			))
-		}
-	</ol>
+  <ol class="relative border-s-[3px] border-gray-100 dark:border-gray-700">
+    {
+      experiences.map((experience) => (
+        <TimelinePoint
+          start={experience.start}
+          end={experience.end}
+          company={experience.company}
+          title={experience.title}
+          description={experience.description}
+          icon={experience.image}
+        />
+      ))
+    }
+  </ol>
 </div>
