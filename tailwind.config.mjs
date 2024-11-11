@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        blob: "blob 6s ease-in-out infinite",
+        blob: "blob 5s ease-in-out infinite",
       },
       keyframes: {
         blob: {

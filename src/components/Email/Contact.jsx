@@ -1,10 +1,12 @@
 import { useRef, useState } from "react";
 
-export default function Contact() {
+export default function Contact()
+{
   const [isSubmited, setIsSubmitted] = useState(false);
   const formRef = useRef(null);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event) =>
+  {
     event.preventDefault();
 
     const formData = {
@@ -15,7 +17,8 @@ export default function Contact() {
       text: `Sender's Email: ${event.target.email.value} \nMessage: ${event.target.text.value}`,
     };
 
-    try {
+    try
+    {
       const response = await fetch("/api/sendEmail.json", {
         method: "POST",
         headers: {
@@ -31,10 +34,12 @@ export default function Contact() {
       // Set the state to true when the email is successfully sent
       setIsSubmitted(true);
 
-      if (formRef.current) {
+      if (formRef.current)
+      {
         formRef.current.reset();
       }
-    } catch (error) {
+    } catch (error)
+    {
       console.error("Error:", error);
     }
   };
@@ -47,7 +52,7 @@ export default function Contact() {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="mx-auto flex w-[85%] max-w-[40rem] flex-col items-center justify-center gap-4 text-balance rounded-lg border bg-neutral-800 px-4 py-6 text-xl text-black shadow-md sm:w-[75%] md:w-[65%] lg:w-[55%]"
+        className="z-40 mx-auto flex w-[85%] max-w-[40rem] flex-col items-center justify-center gap-4 text-balance rounded-lg border bg-neutral-800 px-4 py-6 text-xl text-black shadow-md sm:w-[75%] md:w-[65%] lg:w-[55%]"
       >
         <div className="flex w-[85%] flex-col">
           <label htmlFor="email" className="font-medium text-white">
@@ -85,16 +90,16 @@ export default function Contact() {
         </div>
 
         {/* Conditionally rendering the submit button */}
+
         <button
           type="submit"
           disabled={isSubmited} // Disable button if isSubmited is true
-          className={`w-[85%] max-w-[20rem] rounded-md sm:w-[75%] md:w-[65%] lg:w-[55%] ${
-            isSubmited
-              ? "bg-blue-600 opacity-60"
-              : "bg-blue-600 transition duration-200 ease-out hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 sm:hover:bg-pink-500"
-          } px-4 py-2 font-semibold text-white focus:outline-none`}
+          className={`flex items-center text-center justify-center w-[65%] max-w-[13rem] overflow-hidden rounded-full md:w-[55%] lg:w-[45%] ${isSubmited
+            ? "bg-blue-600 opacity-60"
+            : "bg-blue-600 duration-200 ease-out relative focus:ring-2 focus:ring-blue-500  shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-pink-500 before:duration-500 before:ease-out sm:hover:shadow-orange-500 sm:hover:before:h-72 sm:hover:before:w-[13rem] "
+            } px-4 py-2 font-semibold text-white focus:outline-none`}
         >
-          {isSubmited ? "Message Sent!" : "Send"}
+          {isSubmited ? <p className="z-40">Message Sent!</p> : <p className="z-40">Send</p>}
         </button>
       </form>
     </div>
