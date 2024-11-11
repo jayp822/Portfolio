@@ -5,28 +5,26 @@ import Self from "../assets/self.webp";
 ---
 
 <header
-  transition:animate={fade({ duration: "0.5s" })}
-  class="m-10 mx-auto mt-[150px] flex w-[85%] flex-col items-center justify-center gap-10 sm:flex-row"
->
-  <h1
-    class="z-40 text-balance text-center text-xl font-bold sm:w-[50%] md:text-4xl"
-  >
-    Hey There 👋 My Name is <span
-      class="relative text-nowrap before:absolute before:inset-x-0 before:-bottom-1 before:h-[0.3rem] before:w-full before:rounded-full before:bg-sky-500"
-      >Jay Patel</span
-    >
-    and I am Software Developer Based in Georgia
-  </h1>
-  <div class="z-40">
-    <Image
-      class="size-[175px] rounded-3xl sm:size-[200px] lg:size-[300px]"
-      src={Self}
-      width={1248}
-      height={1248}
-      alt="portfolio"
-      draggable="false"
-      loading="eager"
-      quality="low"
-    />
-  </div>
+	transition:animate={fade({ duration: "0.25s" })}
+	class="m-10 mx-auto mt-[150px] flex w-[85%] flex-col items-center justify-center gap-10 sm:flex-row">
+	<h1
+		class="z-40 text-balance text-center text-xl font-bold sm:w-[50%] md:text-4xl">
+		Hey There 👋 My Name is <span
+			class="relative text-nowrap before:absolute before:inset-x-0 before:-bottom-1 before:h-[0.3rem] before:w-full before:rounded-full before:bg-sky-500"
+			>Jay Patel</span
+		>
+		and I am Software Developer Based in Georgia
+	</h1>
+	<div class="z-40">
+		<Image
+			class="size-[175px] rounded-3xl sm:size-[200px] lg:size-[300px]"
+			src={Self}
+			width={1248}
+			height={1248}
+			alt="portfolio"
+			draggable="false"
+			loading="eager"
+			quality="low"
+		/>
+	</div>
 </header>

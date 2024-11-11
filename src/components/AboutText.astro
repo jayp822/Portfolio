@@ -3,23 +3,20 @@ import { fade } from "astro:transitions";
 ---
 
 <div
-  class="relative flex flex-col items-center"
-  transition:animate={fade({ duration: "0.5s" })}
->
-  <h1
-    class="relative mx-auto mb-[40px] mt-[100px] inline-block text-center text-2xl font-bold before:absolute before:-bottom-1 before:left-0 before:h-[0.3rem] before:w-full before:rounded-full before:bg-orange-500 sm:text-3xl lg:text-4xl"
-  >
-    About
-  </h1>
-  <p
-    class="w-[85%] text-balance text-center text-base text-neutral-200 sm:w-[80%] sm:text-lg md:w-[70%] lg:w-[50%] lg:text-xl"
-  >
-    Hello, I&apos;m Jay Patel, a passionate software developer dedicated to
-    creating impactful full-stack applications that make a difference. By day, I
-    serve as a Software Developer for the United States Air Force, where I bring
-    my technical expertise to mission critical projects. In my free time,
-    I&apos;m always experimenting with new technologies and building innovative
-    applications. Most recently, I&apos;ve been diving into Astro to due to
-    it&apos;s performance and suitability for content-rich websites.
-  </p>
+	class="relative flex flex-col items-center"
+	transition:animate={fade({ duration: "0.25s" })}>
+	<h1
+		class="relative mx-auto mb-[40px] mt-[100px] inline-block text-center text-2xl font-bold before:absolute before:-bottom-1 before:left-0 before:h-[0.3rem] before:w-full before:rounded-full before:bg-orange-500 sm:text-3xl lg:text-4xl">
+		About
+	</h1>
+	<p
+		class="w-[85%] text-balance text-center text-base text-neutral-200 sm:w-[80%] sm:text-lg md:w-[70%] lg:w-[50%] lg:text-xl">
+		Hello, I&apos;m Jay Patel, a passionate software developer dedicated to
+		creating impactful full-stack applications that make a difference. By day, I
+		serve as a Software Developer for the United States Air Force, where I bring
+		my technical expertise to mission critical projects. In my free time,
+		I&apos;m always experimenting with new technologies and building innovative
+		applications. Most recently, I&apos;ve been diving into Astro to due to
+		it&apos;s performance and suitability for content-rich websites.
+	</p>
 </div>
