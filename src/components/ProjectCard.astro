@@ -2,7 +2,7 @@
 const { projectNumber, link, name, description, image } = Astro.props;
 ---
 
-<a href={link} target="_blank" class="block">
+<a href={link} aria-label={name} target="_blank" class="block">
   <div
     class="relative flex size-[150px] flex-col justify-end rounded-2xl border text-white transition duration-200 ease-out sm:size-[200px] sm:hover:scale-105 sm:hover:shadow-lg sm:hover:shadow-gray-800 lg:size-[250px]"
     style={`background-image: url('${image}'); background-size: cover; background-position: center;`}

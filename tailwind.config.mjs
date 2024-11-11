@@ -36,27 +36,10 @@ export default {
           DEFAULT: "hsl(0, 0%, 100%)", // Pure white
           dark: "hsl(0, 0%, 90%)", // Off-white for subtle backgrounds
         },
-        // Dark Theme
-        dark: {
-          accent: {
-            DEFAULT: "hsl(14, 73%, 61%)", // Original color for dark theme
-            light: "hsl(14, 80%, 75%)", // Lighter for highlights in dark mode
-            lighter: "hsl(14, 85%, 90%)", // Lighter for backgrounds
-            dark: "hsl(14, 73%, 55%)", // Darker for more contrast
-            darker: "hsl(14, 73%, 45%)", // Much darker for strong contrast
-          },
-          black: {
-            DEFAULT: "hsl(0, 0%, 90%)", // Almost white for text
-            dark: "hsl(0, 0%, 70%)", // Lighter for borders in dark mode
-          },
-          white: {
-            DEFAULT: "hsl(0, 0%, 15%)", // Off-black for backgrounds
-            light: "hsl(0, 0%, 25%)", // Slightly lighter for subtle areas
-          },
-        },
+        // TODO: Dark Theme
       },
     },
     darkMode: "class",
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
