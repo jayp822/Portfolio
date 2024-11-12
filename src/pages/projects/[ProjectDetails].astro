@@ -27,15 +27,15 @@ const ProjectContent = mdxFiles.find(
 
 <Layout title={ProjectDetails}>
   <div class="mt-[100px] flex flex-col items-center justify-center">
-    <a
-      href="/#all-projects"
-      class="prose w-[90%] rounded-3xl text-xl text-white transition duration-200 ease-out hover:underline sm:hover:text-orange-400"
-      >Back</a
-    >
     <article
       transition:animate={fade({ duration: "0.25s" })}
-      class="prose prose-base prose-invert mx-auto mt-[1rem] w-[90%] overflow-hidden text-balance md:prose-lg lg:prose-xl prose-headings:text-gray-300 prose-h1:text-zinc-300 prose-p:font-normal prose-a:text-orange-400"
+      class="prose-a:duration-400 prose prose-base prose-invert mx-auto mt-[1rem] w-[90%] overflow-hidden text-balance md:prose-lg lg:prose-xl prose-headings:text-gray-300 prose-h1:text-zinc-300 prose-p:font-normal prose-a:text-white prose-a:transition prose-a:ease-out sm:hover:prose-a:text-orange-300"
     >
+      <a
+        href="/#all-projects"
+        class="relative bottom-2 text-xl text-white hover:underline sm:hover:text-orange-400"
+        >Back</a
+      >
       {
         ProjectContent ? (
           <ProjectContent />
