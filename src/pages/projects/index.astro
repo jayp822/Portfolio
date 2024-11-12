@@ -1,16 +1,20 @@
 ---
+import { fade } from "astro:transitions";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Projects">
-  <a
-    href="/#all-projects"
-    class="relative right-1/3 top-20 mx-auto flex h-[2.5rem] w-[8rem] items-center justify-center rounded-3xl text-xl text-white transition duration-200 ease-out hover:text-orange-400 hover:underline"
-    ><button>Back</button></a
-  >
-  <p
-    class="mt-[20rem] flex w-full items-center justify-center text-3xl font-semibold"
-  >
-    In Development...
-  </p>
+  <div class="mt-[100px] flex flex-col items-center justify-center">
+    <a
+      href="/"
+      class="prose w-[90%] rounded-3xl text-xl text-white transition duration-200 ease-out hover:underline sm:hover:text-orange-400"
+      >Back</a
+    >
+    <article
+      transition:animate={fade({ duration: "0.25s" })}
+      class="prose prose-base prose-invert mx-auto mt-[50px] w-[90%] overflow-hidden text-balance md:prose-lg lg:prose-xl prose-headings:text-gray-300 prose-h1:text-blue-400 prose-p:font-normal"
+    >
+      <p>In Development...</p>
+    </article>
+  </div>
 </Layout>

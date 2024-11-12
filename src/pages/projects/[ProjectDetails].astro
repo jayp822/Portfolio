@@ -7,10 +7,6 @@ import Layout from "../../layouts/Layout.astro";
 // Import all MDX files in the specified directory
 const mdxFiles = await Astro.glob("../../content/projects/*.mdx");
 
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
 export function getStaticPaths() {
   return [
     {
@@ -33,7 +29,7 @@ const ProjectContent = mdxFiles.find(
   <div class="mt-[100px] flex flex-col items-center justify-center">
     <a
       href="/#all-projects"
-      class="prose w-[90%] rounded-3xl text-xl text-white transition duration-200 ease-out hover:text-orange-400 hover:underline"
+      class="prose w-[90%] rounded-3xl text-xl text-white transition duration-200 ease-out hover:underline sm:hover:text-orange-400"
       >Back</a
     >
     <article
