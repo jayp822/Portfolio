@@ -5,7 +5,7 @@
     "description-long": "A simple and effective job application management system with job search features",
     "image": "/images/ApplicationAlly.webp",
     "TechStack": "NextJS, MongoDB, Javascript, React, TailwindCSS, Mongoose, NodeJS",
-    "url": "https://applicationally.vercel.app"
+    "url": "/projects/Application-Ally"
   },
   {
     "name": "Local Reports",
@@ -13,7 +13,7 @@
     "description-long": "",
     "image": "/images/local-reports-logo.webp",
     "TechStack": "TypeScript, NextJS, React, Cloudflare, Tailwind CSS",
-    "url": "https://github.com/orgs/Local-Reports/repositories"
+    "url": "/projects/Local-Reports"
   },
   {
     "name": "Weather Wear",
@@ -21,7 +21,7 @@
     "description-long": "Simple Web application that sends you an email about proper cloting attire based of today's weather",
     "image": "/images/WeatherWear.webp",
     "TechStack": "NextJS, Python, TailwindCSS, Azure",
-    "url": "https://weather-wear-app.vercel.app"
+    "url": "/projects/Weather-Wear"
   },
   {
     "name": "MyPass",

@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard.astro";
 ---
 
 <div
+  id="all-projects"
   class="relative flex flex-col items-center justify-center"
   transition:animate={fade({ duration: "0.25s" })}
 >
@@ -26,6 +27,7 @@ import ProjectCard from "./ProjectCard.astro";
           name={project.name}
           image={project.image}
           description={project["description-short"]}
+          transition:name={project.url}
         />
       ))
     }
