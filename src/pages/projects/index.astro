@@ -1,20 +1,33 @@
 ---
-import { fade } from "astro:transitions";
+import ExtendedProject from "../../components/ExtendedProject.astro";
+import projectsAll from "../../content/collection/Projects.json";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Projects">
-  <div class="mt-[100px] flex flex-col items-center justify-center">
-    <article
-      transition:animate={fade({ duration: "0.25s" })}
-      class="prose prose-base prose-invert mx-auto mt-[50px] w-[90%] overflow-hidden text-balance md:prose-lg lg:prose-xl prose-headings:text-gray-300 prose-h1:text-blue-400 prose-p:font-normal"
+  <div
+    class="mx-auto mt-[100px] flex w-[90%] min-w-[55%] flex-col items-start justify-center sm:w-[80%] md:w-[80%] lg:w-[60%]"
+  >
+    <a
+      href="/"
+      class="relative bottom-2 text-xl transition duration-200 ease-out hover:text-orange-400 hover:underline sm:text-white sm:hover:text-orange-400"
+      >Back</a
     >
-      <a
-        href="/"
-        class="relative bottom-2 text-xl text-white transition duration-200 ease-out hover:underline sm:hover:text-orange-400"
-        >Back</a
-      >
-      <p>In Development...</p>
-    </article>
+
+    <div class="mx-auto flex flex-col items-center justify-center gap-5">
+      {
+        projectsAll.map((project, index) => {
+          return (
+            <ExtendedProject
+              name={project.name}
+              key={index}
+              url={project.url}
+              description={project["description-long"]}
+              tech={project.TechStack}
+            />
+          );
+        })
+      }
+    </div>
   </div>
 </Layout>

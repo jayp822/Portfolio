@@ -10,7 +10,7 @@
   {
     "name": "Local Reports",
     "description-short": "Community Driven Lost People Finder",
-    "description-long": "",
+    "description-long": "Hackathon project aims to improve community safety by enabling parents to report missing children and share crucial details about them. It also allows nearby community members to report sightings.",
     "image": "/images/local-reports-logo.webp",
     "TechStack": "TypeScript, NextJS, React, Cloudflare, Tailwind CSS",
     "url": "/projects/Local-Reports"
@@ -26,7 +26,7 @@
   {
     "name": "MyPass",
     "description-short": "Tkinter Password Manager",
-    "description-long": "",
+    "description-long": "Simple Password manager that stores your passwords locally in a json file",
     "image": "/images/MyPass.webp",
     "TechStack": "Python",
     "url": "https://youtu.be/UNTamQXoa8U"
@@ -34,7 +34,7 @@
   {
     "name": "Shell Replica",
     "description-short": "Implemented Bash Shell using C",
-    "description-long": "",
+    "description-long": "Reimplementation of a shell using the pre-built unix commands and by creating a fork of a parent process",
     "image": "/images/Shell.webp",
     "TechStack": "C",
     "url": "https://github.com/jayp822/my-bash-shell"

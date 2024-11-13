@@ -44,7 +44,7 @@ export default function Contact() {
       <h1 className="relative mx-auto mt-[8rem] inline-block text-nowrap text-center text-2xl font-bold before:absolute before:-bottom-1 before:left-0 before:h-[0.3rem] before:w-full before:rounded-full before:bg-pink-500 sm:text-3xl lg:text-4xl">
         Contact
       </h1>
-      <p class="mb-[40px] mt-[20px] text-center text-base text-neutral-300 sm:text-lg lg:text-xl">
+      <p className="mb-[40px] mt-[20px] text-center text-base text-neutral-300 sm:text-lg lg:text-xl">
         Feel free to message me about new opportunities or projects
       </p>
       <form
