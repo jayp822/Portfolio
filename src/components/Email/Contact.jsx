@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="mb-[100px] flex w-full flex-col">
+    <div className="mx-auto mb-[100px] flex min-w-[50%] max-w-xl flex-col">
       <h1 className="relative mx-auto mt-[8rem] inline-block text-nowrap text-center text-2xl font-bold before:absolute before:-bottom-1 before:left-0 before:h-[0.3rem] before:w-full before:rounded-full before:bg-pink-500 sm:text-3xl lg:text-4xl">
         Contact
       </h1>
@@ -50,40 +50,46 @@ export default function Contact() {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="z-40 mx-auto flex w-[85%] max-w-[40rem] flex-col items-center justify-center gap-4 text-balance rounded-lg border bg-neutral-800 px-1 py-6 text-lg text-black shadow-md sm:w-[75%] md:w-[65%] md:text-2xl lg:w-[55%]"
+        className="z-40 mx-auto flex w-[85%] max-w-[40rem] flex-col items-center justify-center gap-1 text-balance rounded-lg border bg-neutral-800 px-1 py-6 text-lg text-black shadow-md sm:w-[75%] md:w-[65%] md:text-2xl lg:w-[55%]"
       >
         <div className="flex w-[85%] flex-col">
-          <label htmlFor="email" className="font-semibold text-purple-300">
+          <label
+            htmlFor="email"
+            className="text-xl font-semibold text-purple-300"
+          >
             Email:
           </label>
           <input
             type="email"
             name="email"
             required
-            className="mt-1 rounded-md border border-gray-300 p-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 md:text-lg"
+            className="mt-1 rounded-md border border-gray-300 p-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
         <div className="flex w-[85%] flex-col">
-          <label htmlFor="subject" className="font-semibold text-green-300">
+          <label
+            htmlFor="subject"
+            className="text-xl font-semibold text-green-300"
+          >
             Name:
           </label>
           <input
             type="text"
             name="subject"
             required
-            className="mt-1 rounded-md border border-gray-300 p-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 md:text-lg"
+            className="mt-1 rounded-md border border-gray-300 p-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
         <div className="flex w-[85%] flex-col">
-          <label htmlFor="text" className="font-semibold text-red-300">
+          <label htmlFor="text" className="text-xl font-semibold text-red-300">
             Message:
           </label>
           <textarea
             name="text"
             required
-            className="mt-1 h-24 rounded-md border border-gray-300 p-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 md:text-lg"
+            className="mt-1 h-24 rounded-md border border-gray-300 p-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
         </div>
 
@@ -92,7 +98,7 @@ export default function Contact() {
         <button
           type="submit"
           disabled={isSubmited} // Disable button if isSubmited is true
-          className={`flex w-[65%] max-w-[11rem] items-center justify-center gap-2 overflow-hidden rounded-full text-center md:w-[55%] lg:w-[45%] ${
+          className={`mt-3 flex w-[65%] max-w-[11rem] items-center justify-center gap-2 overflow-hidden rounded-full text-center md:w-[55%] lg:w-[45%] ${
             isSubmited
               ? "bg-blue-600 opacity-60"
               : "relative bg-blue-600 shadow-2xl transition-all duration-200 ease-out before:absolute before:h-0 before:w-0 before:rounded-full before:bg-pink-500 before:duration-300 before:ease-out focus:ring-2 focus:ring-blue-500 sm:hover:shadow-pink-500 sm:hover:before:h-[11rem] sm:hover:before:w-[11rem]"
